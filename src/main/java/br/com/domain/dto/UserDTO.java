@@ -2,11 +2,15 @@ package br.com.domain.dto;
 
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class UserDTO {
 
 	private Integer id;
 	private String name;
 	private String email;
+	
+	@JsonIgnore
 	private String password;
 
 	public Integer getId() {

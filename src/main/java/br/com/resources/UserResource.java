@@ -1,13 +1,12 @@
 package br.com.resources;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import br.com.config.ModelMapperConfig;
-import br.com.domain.User;
 import br.com.domain.dto.UserDTO;
 import br.com.services.UserService;
 
@@ -17,7 +16,7 @@ public class UserResource {
 
 
 	@Autowired
-	private ModelMapperConfig mapper;
+	private ModelMapper mapper;
 	
 	@Autowired
 	private UserService userService;
