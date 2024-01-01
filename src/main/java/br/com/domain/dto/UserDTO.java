@@ -3,6 +3,8 @@ package br.com.domain.dto;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonEncoding;
 
 public class UserDTO {
 
@@ -10,7 +12,7 @@ public class UserDTO {
 	private String name;
 	private String email;
 	
-	@JsonIgnore
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String password;
 
 	public Integer getId() {
